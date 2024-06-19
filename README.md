@@ -26,6 +26,10 @@ Further details
 in the email or in PDF attached to the email.
 ● Any secrets (for example API key) should be provided in reply email
 
+Prerequisites to run:
+1. .NET SDK 8.0
+2. Visual Studio or VS Code witth "C# Dev Kit" and ".NET Install tool" and "C#" extensions
+
 In order to test the WebSocket one can use one of the following options:
 1. Run the code in "Debug" mode
 2. Use the following code ona browser console:
