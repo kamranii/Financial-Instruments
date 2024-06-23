@@ -28,8 +28,7 @@ namespace TestCase.Infra.DataProviders
         {
             var currencies = GetCurrencies(symbol);
             var url = _requestBuilder.BuildRequestUrl(currencies);
-            //var response = await _httpClient.GetStringAsync(url);
-            var response = "{\r\n    \"Realtime Currency Exchange Rate\": {\r\n        \"1. From_Currency Code\": \"BTC\",\r\n        \"2. From_Currency Name\": \"Bitcoin\",\r\n        \"3. To_Currency Code\": \"EUR\",\r\n        \"4. To_Currency Name\": \"Euro\",\r\n        \"5. Exchange Rate\": \"60807.57000000\",\r\n        \"6. Last Refreshed\": \"2024-06-18 14:42:19\",\r\n        \"7. Time Zone\": \"UTC\",\r\n        \"8. Bid Price\": \"60807.09200000\",\r\n        \"9. Ask Price\": \"60809.85300000\"\r\n    }\r\n}";
+            var response = await _httpClient.GetStringAsync(url);
             if (string.IsNullOrWhiteSpace(response))
             {
                 throw new HttpRequestException("API response was empty.");
