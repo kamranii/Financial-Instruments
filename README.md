@@ -30,9 +30,18 @@ Prerequisites to run:
 1. .NET SDK 8.0
 2. Visual Studio or VS Code witth "C# Dev Kit" and ".NET Install tool" and "C#" extensions
 
+Running the project:
+* Either use GUI of an IDE like Visual Studio or VS Code
+* Or use terminal:
+- navigate to "TestCase" directory from root directory
+-  change environment to "development" by running "export ASPNETCORE_ENVIRONMENT=Development" command
+- run "dotnet build" & "dotnet run" commands respectively
+- navigate to "http://localhost:5265/swagger/index.html" url on any modern browser to test the endpoints using Swagger UI
+
+
 In order to test the WebSocket one can use one of the following options:
 1. Run the code in "Debug" mode
-2. Use the following code ona browser console:
+2. Use the following code on a browser console:
 
     var socket = new WebSocket("wss://localhost:7263/ws?instrument=EURUSD");
     
