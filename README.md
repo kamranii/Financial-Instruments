@@ -48,7 +48,7 @@ In order to test the WebSocket one can use one of the following options:
 2. Use "Postman":
  - Open Postman.
  - Click on the "New" button and select "WebSocket Request".
- - Enter the WebSocket URL, for ex: (wss://localhost:5001/ws?instrument=BTCUSD).
+ - Enter the WebSocket URL, for ex: (wss://localhost:5265/ws?instrument=BTCUSD).
  - Click "Connect".
 
 3. Use Browser Developer Tools:
@@ -56,7 +56,7 @@ In order to test the WebSocket one can use one of the following options:
  - Go to the "Console" tab.
  - Enter the following JavaScript code to connect and test the WebSocket:
 
-    var socket = new WebSocket("wss://localhost:5001/ws?instrument=BTCUSD");
+    var socket = new WebSocket("wss://localhost:5265/ws?instrument=BTCUSD");
 
     socket.onopen = function(event) {
         console.log("Connected to WebSocket server.");
